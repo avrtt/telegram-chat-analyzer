@@ -19,6 +19,11 @@ def app_language():
     language = 'en' if language == "English" else 'ru'
     return language
 
+def author():
+    st.sidebar.markdown(f'''
+        <br><span style="font-size: 15px;">Made by <a href="https://github.com/avrtt">Vladislav Averett</a></span>
+    ''', unsafe_allow_html=True)
+
 def generate_synthetic_locations(df):
     results_list = []
 

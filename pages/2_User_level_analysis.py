@@ -1,12 +1,12 @@
 import streamlit as st
 import numpy as np
-from app_utils.general_utils import refer_to_load_data_section, add_logo, add_filters
+from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters
 from streamlit_extras.buy_me_a_coffee import button
 from PIL import Image
 import emoji
 from app_utils.text_utils import get_top_emojis, human_format
 
-USER_IMAGE = Image.open("add_ons/styles/logos/user_logo.jpg")
+USER_IMAGE = Image.open("addons/styles/logos/user_logo.jpg")
 
 
 def add_metric_black_b():
@@ -155,3 +155,4 @@ def main():
 # Run the app
 if __name__ == "__main__":
     main()
+    author()

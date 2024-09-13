@@ -12,7 +12,7 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 import logging
 
-from app_utils.general_utils import refer_to_load_data_section, add_logo, add_filters, \
+from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, \
     get_locations_markers, local_css
 from app_utils.graphs_utils import generate_geo_barchart, generate_geo_piehart
 from streamlit_extras.buy_me_a_coffee import button
@@ -84,7 +84,7 @@ def main():
         st.subheader(header_text[language])
 
         if not locations_df.empty:
-            st.markdown(local_css("add_ons/styles/metrics.css"), unsafe_allow_html=True)
+            st.markdown(local_css("addons/styles/metrics.css"), unsafe_allow_html=True)
 
             top_freq_geohash = locations_df['geohash'].value_counts().index[0]
 
@@ -133,4 +133,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    author()
 

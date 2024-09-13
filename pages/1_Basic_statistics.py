@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_plotly_events import plotly_events
 from streamlit_extras.buy_me_a_coffee import button
 
-from app_utils.general_utils import refer_to_load_data_section, add_logo, add_filters, local_css
+from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
 from app_utils.graphs_utils import generate_piechart, generate_activity_overtime, generate_day_of_week_activity, \
     generate_hourly_activity, generate_activity_matrix, generate_users_activity_overtime
 
@@ -20,7 +20,7 @@ def main():
 
         filtered_df, min_date, max_date, language = add_filters()
 
-        st.markdown(local_css("add_ons/styles/metrics.css"), unsafe_allow_html=True)
+        st.markdown(local_css("addons/styles/metrics.css"), unsafe_allow_html=True)
 
         if st.session_state.get('file_name'):
             st.header(st.session_state.get('file_name'))
@@ -72,3 +72,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    author()

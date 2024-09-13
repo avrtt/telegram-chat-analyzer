@@ -5,7 +5,7 @@ from streamlit_extras.buy_me_a_coffee import button
 from annotated_text import annotated_text
 
 from app_utils.dl_utils import get_conv_df, get_sum_text, wake_up_models, run_trans, apply_hg_model, API_URL_SENTIMENT
-from app_utils.general_utils import refer_to_load_data_section, add_logo, add_filters, local_css
+from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
 
 from app_utils.graphs_utils import generate_activity_overtime, generate_piechart, generate_users_activity_overtime, \
     generate_sentiment_piehart, generate_sentiment_bars
@@ -267,7 +267,7 @@ def main():
         if st.session_state.get('file_name'):
             st.header(st.session_state.get('file_name'))
 
-        st.markdown(local_css("add_ons/styles/metrics.css"), unsafe_allow_html=True)
+        st.markdown(local_css("addons/styles/metrics.css"), unsafe_allow_html=True)
 
         global_title_lang_dict = {'en': 'Text analysis (NLP)', 'ru': "Анализ текста (NLP)"}
         st.subheader(global_title_lang_dict[language])
@@ -287,3 +287,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    author()

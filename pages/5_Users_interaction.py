@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_extras.buy_me_a_coffee import button
 
-from app_utils.general_utils import refer_to_load_data_section, add_logo, add_filters, local_css
+from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
 from app_utils.graphs_utils import generate_message_responses_flow, user_message_responses_heatmap
 
 
@@ -22,7 +22,7 @@ def main():
         header_text = {'en': 'Users interaction', 'ru': 'Взаимодействие пользователей'}
         st.subheader(header_text[language])
 
-        st.markdown(local_css("add_ons/styles/metrics.css"), unsafe_allow_html=True)
+        st.markdown(local_css("addons/styles/metrics.css"), unsafe_allow_html=True)
 
         st.plotly_chart(generate_message_responses_flow(filtered_df, language, 5), use_container_width=True)
         st.plotly_chart(user_message_responses_heatmap(filtered_df, language, 10), use_container_width=True)
@@ -30,3 +30,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    author()

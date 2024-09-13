@@ -14,6 +14,7 @@ from app_utils.general_utils import (
     add_logo,
     generate_synthetic_locations,
     app_language,
+    author
 )
 from app_utils.parsers import _df_from_str, parse_telegram_html
 
@@ -157,3 +158,4 @@ def clear_placeholders():
 
 if __name__ == "__main__":
     main()
+    author()
