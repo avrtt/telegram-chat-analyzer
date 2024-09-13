@@ -1,6 +1,6 @@
 Uncover deep insights from your Telegram chats using various data analysis tools.
 
-## Features
+# Features
 - Upload your chat exports to Streamlit-based web interface
 - Get basic statistics for your chats and do NLP
 - Perform user-level analysis
@@ -9,9 +9,7 @@ Uncover deep insights from your Telegram chats using various data analysis tools
 
 Initially built for Telegram chat analysis, but also supports WhatsApp exports.
 
-<br>
-
-## Dependencies
+# Dependencies
 - streamlit
 - scikit-learn
 - pandas
@@ -25,9 +23,7 @@ Initially built for Telegram chat analysis, but also supports WhatsApp exports.
 - st-annotated-text
 - whatstk
 
-<br>
-
-## Setup
+# Setup
 
 ### Secrets
 To run this app locally, you need to create a `secrets.toml` file, which should be placed in:
@@ -61,21 +57,15 @@ Run:
 streamlit run Home.py
 ```
 
-<br>
-
-## Trobleshooting
+# Trobleshooting
 
 If you run Streamlit and it says that module is missing, you should probably upgrade Streamlit:
 ```bash
 pip install --upgrade streamlit 
 ```
 
-<br>
-
-## Contributing
+# Contributing
 Feel free to open PRs and issues.
 
-<br>
-
-## License
+# License
 Distributed under the MIT License. See LICENSE.txt for more information.
