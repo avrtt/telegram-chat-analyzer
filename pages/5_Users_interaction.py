@@ -1,8 +1,8 @@
 import streamlit as st
 from streamlit_extras.buy_me_a_coffee import button
 
-from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
-from app_utils.graphs_utils import generate_message_responses_flow, user_message_responses_heatmap
+from utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
+from utils.graphs_utils import generate_message_responses_flow, user_message_responses_heatmap
 
 
 

@@ -12,9 +12,9 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 import logging
 
-from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, \
+from utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, \
     get_locations_markers, local_css
-from app_utils.graphs_utils import generate_geo_barchart, generate_geo_piehart
+from utils.graphs_utils import generate_geo_barchart, generate_geo_piehart
 from streamlit_extras.buy_me_a_coffee import button
 
 user_agent = 'user_me_{}'.format(randint(10000,99999))

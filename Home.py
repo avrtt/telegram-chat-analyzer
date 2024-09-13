@@ -9,14 +9,14 @@ from PIL import Image
 from streamlit_extras.buy_me_a_coffee import button
 from streamlit_extras.switch_page_button import switch_page
 
-from app_utils.general_utils import (
+from utils.general_utils import (
     add_metadata_to_df,
     add_logo,
     generate_synthetic_locations,
     app_language,
     author
 )
-from app_utils.parsers import _df_from_str, parse_telegram_html
+from utils.parsers import _df_from_str, parse_telegram_html
 
 GOOGLE_VERIFICATION_TAG = '<meta name="google-site-verification" content="{}" />'
 

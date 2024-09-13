@@ -8,7 +8,7 @@ from datetime import timedelta
 
 import nltk
 
-from app_utils.text_utils import clean_text, detect_lang
+from utils.text_utils import clean_text, detect_lang
 
 GOOGLE_URL_PATTERN = r"(https:\/\/maps\.google\.com\/\?q=-?\d+\.\d+,-?\d+\.\d+)"
 GEOHASH_FOR_EXAMPLE_CHAT = ["dr72", "sr2y", "xn77", "stq4"]

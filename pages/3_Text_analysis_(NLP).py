@@ -4,12 +4,12 @@ import re
 from streamlit_extras.buy_me_a_coffee import button
 from annotated_text import annotated_text
 
-from app_utils.dl_utils import get_conv_df, get_sum_text, wake_up_models, run_trans, apply_hg_model, API_URL_SENTIMENT
-from app_utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
+from utils.dl_utils import get_conv_df, get_sum_text, wake_up_models, run_trans, apply_hg_model, API_URL_SENTIMENT
+from utils.general_utils import author, refer_to_load_data_section, add_logo, add_filters, local_css
 
-from app_utils.graphs_utils import generate_activity_overtime, generate_piechart, generate_users_activity_overtime, \
+from utils.graphs_utils import generate_activity_overtime, generate_piechart, generate_users_activity_overtime, \
     generate_sentiment_piehart, generate_sentiment_bars
-from app_utils.text_utils import detect_lang, human_format, stream_data
+from utils.text_utils import detect_lang, human_format, stream_data
 
 import nltk
 if not st.session_state.get('punkt_downloaded'):
