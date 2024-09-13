@@ -79,7 +79,7 @@ def assign_metrics(col, totals_df, image, user_info, language, add_seperator=Tru
     n_days_lang_dict = {'en': f"{sign[language]} active days", 'ru': f'{sign[language]} активных дней'}
     n_conv_lang_dict = {'en': f"{sign[language]} conversation", 'ru': f'{sign[language]} переписка'}
     n_media_lang_dict = {'en': f"{sign[language]} media", 'ru': f'медиа'}
-    emoji_lang_dict = {'en': "Top emoji", 'ru': "Топ эмодзи"}
+    emoji_lang_dict = {'en': "Top emoji", 'ru': "Основная эмодзи"}
 
     col.image(image, caption=user_info.username, width=100)
     col1, col2 = st.columns((2, 2))
@@ -92,7 +92,7 @@ def assign_metrics(col, totals_df, image, user_info, language, add_seperator=Tru
     if emoji.is_emoji(user_info.top_freq_emoji):
         col2.metric(emoji_lang_dict[language], emoji.emojize(emoji.demojize(user_info.top_freq_emoji)))
     else:
-        col2.metric(emoji_lang_dict[language], 'No Emoji')
+        col2.metric(emoji_lang_dict[language], 'N/A')
 
     if add_seperator:
         st.divider()
@@ -113,19 +113,19 @@ def main():
         if st.session_state.get('file_name'):
             st.header(st.session_state.get('file_name'))
 
-        header_text = {'en': 'User-level analysis', 'ru': 'Анализ на уровне пользователя'}
+        header_text = {'en': 'User-level analysis', 'ru': 'Анализ на уровне пользователей'}
         st.subheader(header_text[language])
         top_col, _ = st.columns((1000, 0.1))
         with top_col:
-            pct_lang_dict = {'en': "Show percentages", "ru":'Показать проценты'}
+            pct_lang_dict = {'en': "Show percentages", "ru":'В процентах'}
 
             method_lang_dict = {'en': {"Most associated":"Most associated",
                                         "Most frequent":"Most frequent"},
-                                 "ru": {"Наиболее связанные": "Most associated",
-                                        "Наиболее частые": "Most frequent"}}
+                                 "ru": {"Наиболее ассоциированная": "Most associated",
+                                        "Наиболее частая": "Most frequent"}}
 
             pct = st.checkbox(pct_lang_dict[language])
-            emohi_picker_lang_dict = {'en': "Top emoji method", 'ru':"Top emoji method"}
+            emohi_picker_lang_dict = {'en': "Emoji type", 'ru':"Тип эмодзи"}
             emoji_method = st.radio(emohi_picker_lang_dict[language], list(method_lang_dict[language].keys()))
 
             emoji_method = method_lang_dict[language][emoji_method]
@@ -152,7 +152,6 @@ def main():
         add_metric_black_b()
 
 
-# Run the app
 if __name__ == "__main__":
     main()
     author()
