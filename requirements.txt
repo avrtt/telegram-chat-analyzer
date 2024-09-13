@@ -1,0 +1,16 @@
+emoji
+folium
+gensim
+geopy
+googletrans
+nltk
+pandas
+pygeohash
+scikit-learn
+scipy
+st-annotated-text
+streamlit
+streamlit-extras
+streamlit-folium
+streamlit-plotly-events
+whatstk

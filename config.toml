@@ -1,0 +1,8 @@
+[theme]
+base="dark"
+primaryColor="#4b5799"
+backgroundColor="#222324"
+secondaryBackgroundColor="#3d3d3d"
+
+[client]
+showErrorDetails = false

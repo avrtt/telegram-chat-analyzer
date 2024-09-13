@@ -1,0 +1,9 @@
+*.pb
+*.pyc
+*.xml
+*.pyc
+*idea/*
+*flas
+flask_session/
+.streamlit/secrets.toml
+
